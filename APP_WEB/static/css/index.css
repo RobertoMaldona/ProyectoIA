@@ -1,0 +1,61 @@
+:root {
+    --bg-color: #ececec;
+    --hl-color: #30475e;
+    --base-color: #222831;
+    --hl2-color: #c1a57b;
+    --error-color: #c07862;
+}
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            height: 100vh; /* Set the body height to 100% of the viewport height */
+            margin: 0; /* Remove default margin to ensure the div is centered properly */
+        }
+
+        .map-container{
+            width: 30vw;
+            height: 90vh;
+            background-image: url(../uploads/background.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        img{
+            width: 9vw;
+            height: 9vh;
+        }
+
+        .microwave-container {
+            position: absolute;
+        }
+
+        .microwave-result-container {
+            position: absolute;
+            visibility: hidden;
+            background-color: aquamarine;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            
+        }
+
+        .microwave-container:hover .microwave-result-container {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0.1s, opacity 0.3s ease;
+        }
+
+
+
+        #microwave0 {
+            bottom: 30vh; /* Set the distance from the bottom of the map-container */
+            right: 45vw; /* Set the distance from the left of the map-container */
+        }
+
+        #microwave1 {
+            bottom: 60vh; /* Set the distance from the top of the map-container */
+            right: 35vw; /* Set the distance from the left of the map-container */
+        }
