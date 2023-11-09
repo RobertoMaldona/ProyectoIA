@@ -10,13 +10,10 @@ import secrets
 @app.route('/', methods=['GET'])
 def get_index():
     results = list()
-    """
     apicall = requests.get(API_URL)
     if apicall.status_code == 200:
-        #procesar resutlados
-        pass
-    """
-    results.append("1min")
+        apicall = json.loads(apicall.content.decode('utf-8'))
+        results.append(apicall['tiempo'] + 'min')
     results.append("2min")
     return render_template('index.html', results=results)
     

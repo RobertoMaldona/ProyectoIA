@@ -5,10 +5,10 @@ from flask import Flask, jsonify, request
 
 import time
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET'])
 def predict():
     startTime = time.time()
-    if request.method == 'POST':
+    if request.method == 'GET':
 
         image_path = elegir_archivo_al_azar('media/micro1') 
 
